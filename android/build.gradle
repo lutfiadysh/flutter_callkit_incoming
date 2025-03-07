@@ -2,7 +2,7 @@ group 'com.example.flutter_callkit_incoming'
 version '1.0-SNAPSHOT'
 
 buildscript {
-    ext.kotlin_version = '1.8.0'
+    ext.kotlin_version = '1.9.21'
     repositories {
         google()
         jcenter()
@@ -35,17 +35,13 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-
-    kotlinOptions {
-      jvmTarget = "1.8"
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
     
-    // kotlin {
-      //  jvmToolchain(17)
-   //  }
+     kotlin {
+        jvmToolchain(17)
+     }
     
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
